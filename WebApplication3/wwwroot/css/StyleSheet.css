@@ -1,0 +1,9 @@
+﻿body {
+    background-image: url('../img/wp2968489-medical-doctor-wallpaper-hd.jpg');
+    background-size: cover;
+}
+h1{
+    display:flex;
+    justify-content:center;
+    align-content:center;
+}

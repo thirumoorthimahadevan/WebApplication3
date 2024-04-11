@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebApplication3.Models.Mmodel>;
+
+<div class="mt-2" style="width:50%">
+    <div class="row">
+        <div class="col-md-4">
+            <a href="/Home/Add" class="btn btn-primary">AddPatients</a>
+        </div>
+        <table class="table table-striped" style="margin-left:250px;border:solid;color:white">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Action</th>
+
+                </tr>
+
+                @foreach (var Mmodel in Model)
+                {
+                    <tr>
+                        <td>@Mmodel.Name</td>
+                        <td>@Mmodel.Description</td>
+
+                        <td><a class="bg-danger text-light" href="/Home/Update?id=@Mmodel.Id">Edit</a><a href="/Home/Delete?Id=@Mmodel.Id">Delete</a></td>
+
+                       
+                    </tr>
+                }
+
+
+            </thead>
+        </table>
+    </div>
+</div>
